@@ -1,6 +1,6 @@
 <?php
 
-$title = "列出域名";
+$title = "修改域名";
 $is_creator = false;
 
 session_start(); // 启动会话，以便使用 $_SESSION 变量
