@@ -1,0 +1,20 @@
+<!--
+Navbar include file.
+-->
+
+<mdui-navigation-rail contained divider>
+    <!-- 判断该页面是否是该帐号人创建的 -->
+    <?php if ($is_creator) { ?>
+        <mdui-fab lowered icon="edit--outlined" slot="top"></mdui-fab>
+    <?php } ?>
+    <?php if ($is_loggedin) { ?>
+        <mdui-button-icon icon="logout--outlined" slot="bottom" href="/account/logout.php"></mdui-button-icon>
+        <mdui-button-icon icon="account_circle--outlined" slot="bottom" id="account_manage"></mdui-button-icon>
+    <?php } else { ?>
+        <mdui-button-icon icon="login--outlined" slot="bottom" id="login" href="/account/login.php"></mdui-button-icon>
+    <?php } ?>
+    <mdui-navigation-rail-item icon="home--outlined" value="recent" href="/index.php">首页</mdui-navigation-rail-item>
+    <mdui-navigation-rail-item icon="add--outlined" value="images" href="/join.php">加入</mdui-navigation-rail-item>
+    <mdui-navigation-rail-item icon="search--outlined" value="images" href="/search.php">搜索</mdui-navigation-rail-item>
+    <mdui-navigation-rail-item icon="library_books--outlined" value="library" href="/aboutus.php">关于我们</mdui-navigation-rail-item>
+</mdui-navigation-rail>

@@ -1,0 +1,22 @@
+.container {
+    margin-left: 27px;
+    min-height: 85vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.ol {
+    color: white ! important;
+    text-decoration: none ! important;
+    /* hover 时渐变为 skyblue */
+    transition: color 0.2s ease-in-out ! important;
+}
+
+.ol:hover {
+    color: skyblue ! important;
+    text-decoration: none ! important;
+}
+
+footer {
+    padding: 20px;
+}
