@@ -1,0 +1,23 @@
+<div class="container">
+    <?php
+    include './dataManager/DataManager.php';
+    $dm = new DataManager();
+    $randoms = range(0001, 9999);
+    $randoms = array_map('strval', $randoms);
+    $numbers = array();
+    foreach ($randoms as $random) {
+        if ($dm->checkAvalibleNumber($random)) {
+            $numbers[] = "2025".$random;
+        }
+    }
+    // 随机选号
+    $random_number = $numbers[array_rand($numbers)];
+    ?>
+    <h1 class='text-center' style="color: white;">随机号码结果</h1>
+    <h1 class='text-center' style="color: white;">您随机到的号码是：<?php echo $random_number;?></h1>
+    <br>
+    <mdui-segmented-button-group full-width style="width: 200px;">
+        <mdui-segmented-button href="/join.php?page=3&number=<?php echo $random_number;?>">继续</mdui-segmented-button>
+        <mdui-segmented-button href="/join.php?page=2">重抽</mdui-segmented-button>
+    </mdui-segmented-button-group>
+</div>

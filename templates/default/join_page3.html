@@ -1,0 +1,27 @@
+<div class="container">
+    <h1>加入</h1>
+    <!--
+    /* 
+    保存以下数据：
+    Name: 名称
+    Domain: 域名
+    Description: 介绍
+    Creator: 创建者
+    CreateTime: 创建时间
+    Status: 当前状态
+    IsTakingLink: 是否带有备案链接
+    Number: 号码
+    */
+    -->
+    <form action="/join.php" method="get">
+        <mdui-text-field label="名称" style="margin-top: 27px;" name="name" type="text" required></mdui-text-field>
+        <mdui-text-field label="域名" style="margin-top: 27px;" name="domain" type="text" required></mdui-text-field>
+        <mdui-text-field label="介绍" style="margin-top: 27px;" name="description" type="text" required></mdui-text-field>
+        <mdui-text-field label="创建者" style="margin-top: 27px;" name="creator" type="text" required></mdui-text-field>
+        <mdui-text-field label="创建时间" style="margin-top: 27px;" name="createtime" type="text" required></mdui-text-field>
+        <mdui-text-field label="当前状态" style="margin-top: 27px;" name="status" type="text" required></mdui-text-field>
+        <input type="text" name="number" value="<?php echo $_GET['number'];?>" hidden>
+        <input type="text" name="page" value="4" hidden>
+        <mdui-button variant="elevated" style="margin-top: 27px; width: 200px;" type="submit">继续</mdui-button>
+    </form>
+</div>
