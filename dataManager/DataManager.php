@@ -42,6 +42,10 @@ class DataManager
 
     public function addUser($username, $password, $email)
     {
+        // 检查用户名是否已存在
+        if (isset($this->loadData()["users"][$username])) {
+            return false;
+        }
         $data = $this->loadData();
         // password 用 md5
         $data["users"][$username] = array(
@@ -49,6 +53,7 @@ class DataManager
             "email" => $email
         );
         $this->saveData($data);
+        return true;
     }
 
     public function addRecord($name, $username, $domain, $description, $number)

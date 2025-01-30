@@ -1,0 +1,17 @@
+<!-- 
+因该项目的特殊性，页面是分开编写的，也就意味着这里只需要写登录的UI和逻辑. 
+还有，这个部分是前端，而 /account/actions/login.php 负责后端逻辑，所以这里不需要写后端逻辑.
+-->
+
+<div class="container">
+    <div class="form">
+        <form action="/account/actions/login.php" method="get" style="width: 500px;">
+            <h1>登录</h1>
+            <mdui-text-field label="用户名" style="margin-top: 27px;" name="username" required></mdui-text-field>
+            <mdui-text-field label="密码" style="margin-top: 27px;" name="password" type="password" required></mdui-text-field>
+            <mdui-button variant="elevated" style="margin-top: 27px;" type="submit">登录</mdui-button>
+        </form>
+        <br>
+        <a href="/account/register.php" class="ol">没有账号？注册一个</a>
+    </div>
+</div>
