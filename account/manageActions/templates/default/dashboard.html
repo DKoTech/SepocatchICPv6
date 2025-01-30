@@ -1,0 +1,11 @@
+<div class="container">
+    <h1>控制台</h1>
+    <h2>欢迎回到控制台，<?php echo $_SESSION['user'];?>。</h2>
+    <br>
+    <mdui-segmented-button-group style="width: 500px;">
+        <mdui-segmented-button href="./manageActions/list.php" target="_blank">列出注册的域名</mdui-segmented-button>
+        <mdui-segmented-button href="./manageActions/edit.php" target="_blank">编辑信息</mdui-segmented-button>
+        <mdui-segmented-button href="./manageActions/delete.php" target="_blank">删除域名</mdui-segmented-button>
+    </mdui-segmented-button-group>
+</div>
+<!-- 妈的 mdui 怎么这么好看 -->

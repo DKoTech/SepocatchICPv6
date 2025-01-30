@@ -13,13 +13,11 @@
     Number: 号码
     */
     -->
-    <form action="/join.php" method="get">
+    <form action="/join.php" method="get" style="width: 200px">
         <mdui-text-field label="名称" style="margin-top: 27px;" name="name" type="text" required></mdui-text-field>
         <mdui-text-field label="域名" style="margin-top: 27px;" name="domain" type="text" required></mdui-text-field>
         <mdui-text-field label="介绍" style="margin-top: 27px;" name="description" type="text" required></mdui-text-field>
-        <mdui-text-field label="创建者" style="margin-top: 27px;" name="creator" type="text" required></mdui-text-field>
-        <mdui-text-field label="创建时间" style="margin-top: 27px;" name="createtime" type="text" required></mdui-text-field>
-        <mdui-text-field label="当前状态" style="margin-top: 27px;" name="status" type="text" required></mdui-text-field>
+        <input name="creator" type="text" value="<?php echo $_SESSION['username'];?>" hidden></input>
         <input type="text" name="number" value="<?php echo $_GET['number'];?>" hidden>
         <input type="text" name="page" value="4" hidden>
         <mdui-button variant="elevated" style="margin-top: 27px; width: 200px;" type="submit">继续</mdui-button>
