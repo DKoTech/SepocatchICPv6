@@ -47,7 +47,7 @@ include '../../templates/default/nav.html';
     Number: 号码
     */
     -->
-    <form action="/edit.php" method="get" style="width: 200px;">
+    <form action="/edit.php" method="get" style="width: 500px;">
         <mdui-text-field label="名称" style="margin-top: 27px;" name="name" type="text" required></mdui-text-field>
         <mdui-text-field label="域名" style="margin-top: 27px;" name="domain" type="text" required></mdui-text-field>
         <mdui-text-field label="介绍" style="margin-top: 27px;" name="description" type="text" required></mdui-text-field>
